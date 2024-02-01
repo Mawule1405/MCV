@@ -1,1 +1,1 @@
-const dureeAnime = 10;
+const dureeAnime = 20;

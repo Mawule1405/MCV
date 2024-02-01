@@ -10,6 +10,7 @@ import 'package:mycv/constants/consts_widget.dart';
 import 'package:mycv/screens/home_screen.dart';
 import '../screens/call_screen.dart';
 import '../screens/about_screen.dart';
+import '../screens/formation_screen.dart';
 
 class DrawerComponent extends StatelessWidget {
   @override
@@ -67,7 +68,8 @@ class DrawerComponent extends StatelessWidget {
 
                   //Formations
                   ListTile(
-                    onTap: () {},
+                    onTap: () => Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (c) => FormationScreen())),
                     title: Row(
                       children: <Widget>[
                         Icon(Icons.school),
