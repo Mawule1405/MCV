@@ -9,6 +9,7 @@ import 'package:mycv/constants/consts_widget.dart';
 //Importation des ecrans et des composantes
 import 'package:mycv/screens/home_screen.dart';
 import '../screens/call_screen.dart';
+import '../screens/about_screen.dart';
 
 class DrawerComponent extends StatelessWidget {
   @override
@@ -123,7 +124,8 @@ class DrawerComponent extends StatelessWidget {
 
                   //About
                   ListTile(
-                    onTap: () {},
+                    onTap: () => Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (c) => AboutSreen())),
                     title: Row(
                       children: <Widget>[
                         Icon(Icons.description),

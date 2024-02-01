@@ -1,0 +1,1 @@
+const dureeAnime = 10;
