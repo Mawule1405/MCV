@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
               padding:
                   const EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0),
               child: FAProgressBar(
-                size: 25,
+                size: 10,
                 currentValue: 100,
                 animatedDuration: Duration(seconds: 5),
                 backgroundColor: Colors.black,

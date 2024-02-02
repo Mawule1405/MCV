@@ -124,6 +124,83 @@ Widget generatorTitle(BuildContext c, titleForm) {
       ));
 }
 
+//Fonction generateur de competences
+Widget generatorComptence(BuildContext c, String texte, int niveau) {
+  List<Color> quintuple = [
+    Color(mcvBlack),
+    Color(mcvBlack),
+    Color(mcvBlack),
+    Color(mcvBlack),
+    Color(mcvBlack)
+  ];
+  if (niveau >= 0 && niveau <= 5) {
+    for (int i = 0; i < niveau; i++) {
+      quintuple[i] = Color(mcvOrange);
+    }
+    return Container(
+      width: MediaQuery.of(c).size.width - 40,
+      padding: EdgeInsets.all(20.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: (MediaQuery.of(c).size.width - 40) / 2,
+            child: Text(texte),
+          ),
+          Container(
+            width: (MediaQuery.of(c).size.width - 40) / 2,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Icon(Icons.star, color: quintuple[0]),
+                Icon(Icons.star, color: quintuple[1]),
+                Icon(Icons.star, color: quintuple[2]),
+                Icon(Icons.star, color: quintuple[3]),
+                Icon(Icons.star, color: quintuple[4]),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  } else {
+    return Container(
+      margin: EdgeInsets.only(left: 20, right: 20),
+      width: (MediaQuery.of(c).size.width - 40),
+      child: Text(
+          "Impossible de generer cette competence. Veuillez respecter l'echelle de 5 "),
+    );
+  }
+}
+
+Widget generatorTitleComp(BuildContext c, titleForm) {
+  return Container(
+      padding: EdgeInsets.only(top: 40, bottom: 5, left: 20, right: 20),
+      alignment: Alignment.topLeft,
+      child: Row(
+        children: [
+          Container(
+            padding: EdgeInsets.only(right: 20.0),
+            child: Icon(
+              Icons.access_alarm,
+              color: Color(mcvOrange),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(right: 20),
+            alignment: Alignment.topLeft,
+            width: MediaQuery.of(c).size.width - 100,
+            child: Text(
+              titleForm,
+              style: styleSmallTitle,
+            ),
+          ),
+        ],
+      ));
+}
+
 // Construction des séparateurs
 const separateHAbout = SizedBox(height: 20.0);
 const separateHAboutBG = SizedBox(height: 250.0);

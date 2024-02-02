@@ -11,6 +11,7 @@ import 'package:mycv/screens/home_screen.dart';
 import '../screens/call_screen.dart';
 import '../screens/about_screen.dart';
 import '../screens/formation_screen.dart';
+import '../screens/competence_screen.dart';
 
 class DrawerComponent extends StatelessWidget {
   @override
@@ -52,20 +53,6 @@ class DrawerComponent extends StatelessWidget {
                     ),
                   ),
 
-                  //Biographie
-                  ListTile(
-                    onTap: () {},
-                    title: Row(
-                      children: <Widget>[
-                        Icon(Icons.man),
-                        Text(
-                          mcvGBiographie,
-                          style: GoogleFonts.rubik(textStyle: styleTexte),
-                        ),
-                      ],
-                    ),
-                  ),
-
                   //Formations
                   ListTile(
                     onTap: () => Navigator.pushReplacement(context,
@@ -83,7 +70,8 @@ class DrawerComponent extends StatelessWidget {
 
                   //Competences
                   ListTile(
-                    onTap: () {},
+                    onTap: () => Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (c) => CompetenceScreen())),
                     title: Row(
                       children: <Widget>[
                         Icon(Icons.work),
