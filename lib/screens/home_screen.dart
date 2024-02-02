@@ -18,18 +18,18 @@ class HomeScreen extends StatelessWidget {
     // SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           mcvGAccueil,
           style: styleAppBarTitle,
         ),
         backgroundColor: const Color(mcvOrange),
       ),
-      drawer: DrawerComponent(),
+      drawer: const DrawerComponent(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            CircleAvatar(
+            const CircleAvatar(
               radius: 70.0,
               backgroundImage: AssetImage(appIconMcv),
             ),
@@ -39,12 +39,30 @@ class HomeScreen extends StatelessWidget {
               child: FAProgressBar(
                 size: 10,
                 currentValue: 100,
-                animatedDuration: Duration(seconds: 5),
+                animatedDuration: const Duration(seconds: 5),
                 backgroundColor: Colors.black,
                 progressColor: const Color(mcvOrange),
               ),
             ),
-            Text('5555'),
+            Container(
+              padding: const EdgeInsets.only(top: 20.0),
+              child: const Column(
+                children: [
+                  Text(
+                    "HELOU Komlan Mawulé",
+                    style: styleSmallTitle,
+                  ),
+                  Text(
+                    'Né le 14/05/1996 à Aného-Togo',
+                    style: styleSmallTitle,
+                  ),
+                  Text(
+                    'Ingénieur Informaticien',
+                    style: styleSmallTitle,
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),

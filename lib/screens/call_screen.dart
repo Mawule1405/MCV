@@ -12,14 +12,14 @@ import '../constants/consts_string.dart';
 import '../constants/consts_widget.dart';
 
 class CallScreen extends StatelessWidget {
-  CallScreen({super.key});
+  const CallScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(mcvGContacter, style: styleAppBarTitle),
-          backgroundColor: Color(mcvOrange)),
-      drawer: DrawerComponent(),
+          title: const Text(mcvGContacter, style: styleAppBarTitle),
+          backgroundColor: const Color(mcvOrange)),
+      drawer: const DrawerComponent(),
       body: _callBody(context),
     );
   }
@@ -48,7 +48,7 @@ class CallScreen extends StatelessWidget {
               ),
             ),
           ],
-          backgroundColor: Color(mcvOrange),
+          backgroundColor: const Color(mcvOrange),
         ),
       );
     }
@@ -74,7 +74,8 @@ class CallScreen extends StatelessWidget {
                 children: <Widget>[
                   //Whatsapp
                   Card(
-                    margin: EdgeInsets.only(top: 10, left: 20.0, right: 0),
+                    margin:
+                        const EdgeInsets.only(top: 10, left: 20.0, right: 0),
                     child: IconButton(
                       icon: FaIcon(
                         FontAwesomeIcons.whatsapp,
@@ -92,7 +93,8 @@ class CallScreen extends StatelessWidget {
 
                   //Tiktok
                   Card(
-                    margin: EdgeInsets.only(top: 10, left: 0.0, right: 20),
+                    margin:
+                        const EdgeInsets.only(top: 10, left: 0.0, right: 20),
                     child: IconButton(
                       icon: FaIcon(
                         FontAwesomeIcons.tiktok,
@@ -120,7 +122,8 @@ class CallScreen extends StatelessWidget {
                 children: <Widget>[
                   //Linkedin
                   Card(
-                    margin: EdgeInsets.only(top: 10, left: 20.0, right: 0),
+                    margin:
+                        const EdgeInsets.only(top: 10, left: 20.0, right: 0),
                     child: IconButton(
                       icon: FaIcon(
                         FontAwesomeIcons.linkedinIn,
@@ -134,7 +137,8 @@ class CallScreen extends StatelessWidget {
 
                   //telephone
                   Card(
-                    margin: EdgeInsets.only(top: 10, left: 0.0, right: 20),
+                    margin:
+                        const EdgeInsets.only(top: 10, left: 0.0, right: 20),
                     child: IconButton(
                       icon: FaIcon(
                         FontAwesomeIcons.phone,
@@ -156,7 +160,8 @@ class CallScreen extends StatelessWidget {
                 children: <Widget>[
                   //facebook
                   Card(
-                    margin: EdgeInsets.only(top: 10, left: 20.0, right: 0),
+                    margin:
+                        const EdgeInsets.only(top: 10, left: 20.0, right: 0),
                     child: IconButton(
                       icon: FaIcon(
                         FontAwesomeIcons.facebook,
@@ -170,7 +175,8 @@ class CallScreen extends StatelessWidget {
 
                   //telegram
                   Card(
-                    margin: EdgeInsets.only(top: 10, left: 0.0, right: 20),
+                    margin:
+                        const EdgeInsets.only(top: 10, left: 0.0, right: 20),
                     child: IconButton(
                         icon: FaIcon(
                           FontAwesomeIcons.telegram,
@@ -196,7 +202,8 @@ class CallScreen extends StatelessWidget {
                 children: <Widget>[
                   //Linkedin
                   Card(
-                    margin: EdgeInsets.only(top: 10, left: 20.0, right: 0),
+                    margin:
+                        const EdgeInsets.only(top: 10, left: 20.0, right: 0),
                     child: IconButton(
                       icon: FaIcon(
                         FontAwesomeIcons.sms,
@@ -209,7 +216,8 @@ class CallScreen extends StatelessWidget {
 
                   //telephone
                   Card(
-                    margin: EdgeInsets.only(top: 10, left: 0.0, right: 20),
+                    margin:
+                        const EdgeInsets.only(top: 10, left: 0.0, right: 20),
                     child: IconButton(
                       icon: FaIcon(
                         FontAwesomeIcons.squareEnvelope,

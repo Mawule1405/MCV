@@ -9,17 +9,18 @@ import '../constants/consts_string.dart';
 import '../components/drawer_component.dart';
 
 class FormationScreen extends StatelessWidget {
+  const FormationScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(mcvOrange),
-        title: Text(
+        backgroundColor: const Color(mcvOrange),
+        title: const Text(
           formApp,
           style: styleAppBarTitle,
         ),
       ),
-      drawer: DrawerComponent(),
+      drawer: const DrawerComponent(),
       body: _formationBody(context),
     );
   }

@@ -14,18 +14,17 @@ import '../screens/formation_screen.dart';
 import '../screens/competence_screen.dart';
 
 class DrawerComponent extends StatelessWidget {
+  const DrawerComponent({super.key});
   @override
   Widget build(BuildContext context) {
     return Drawer(
-        backgroundColor: Color(mcvWhite),
+        backgroundColor: const Color(mcvWhite),
         child: Column(
           children: <Widget>[
-            DrawerHeader(
-              child: Container(
-                child: CircleAvatar(
-                  radius: 70.0,
-                  backgroundImage: AssetImage(appIconMcv),
-                ),
+            const DrawerHeader(
+              child: CircleAvatar(
+                radius: 70.0,
+                backgroundImage: AssetImage(appIconMcv),
               ),
             ),
 
@@ -36,15 +35,15 @@ class DrawerComponent extends StatelessWidget {
             Expanded(
               child: ListView(
                 shrinkWrap: true,
-                padding: EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(20.0),
                 children: <Widget>[
                   //Accueil
                   ListTile(
                     onTap: () => Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (c) => HomeScreen())),
+                        MaterialPageRoute(builder: (c) => const HomeScreen())),
                     title: Row(
                       children: <Widget>[
-                        Icon(Icons.home),
+                        const Icon(Icons.home),
                         Text(
                           mcvGAccueil,
                           style: GoogleFonts.rubik(textStyle: styleTexte),
@@ -59,7 +58,7 @@ class DrawerComponent extends StatelessWidget {
                         MaterialPageRoute(builder: (c) => FormationScreen())),
                     title: Row(
                       children: <Widget>[
-                        Icon(Icons.school),
+                        const Icon(Icons.school),
                         Text(
                           mcvGFormation,
                           style: GoogleFonts.rubik(textStyle: styleTexte),
@@ -70,11 +69,13 @@ class DrawerComponent extends StatelessWidget {
 
                   //Competences
                   ListTile(
-                    onTap: () => Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (c) => CompetenceScreen())),
+                    onTap: () => Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (c) => const CompetenceScreen())),
                     title: Row(
                       children: <Widget>[
-                        Icon(Icons.work),
+                        const Icon(Icons.work),
                         Text(
                           mcvGCompetence,
                           style: GoogleFonts.rubik(textStyle: styleTexte),
@@ -88,7 +89,7 @@ class DrawerComponent extends StatelessWidget {
                     onTap: () {},
                     title: Row(
                       children: <Widget>[
-                        Icon(Icons.work_history),
+                        const Icon(Icons.work_history),
                         Text(
                           mcvGPortfolio,
                           style: GoogleFonts.rubik(textStyle: styleTexte),
@@ -100,10 +101,10 @@ class DrawerComponent extends StatelessWidget {
                   //Contactez-nous
                   ListTile(
                     onTap: () => Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (c) => CallScreen())),
+                        MaterialPageRoute(builder: (c) => const CallScreen())),
                     title: Row(
                       children: <Widget>[
-                        Icon(Icons.call),
+                        const Icon(Icons.call),
                         Text(
                           mcvGContacter,
                           style: GoogleFonts.rubik(textStyle: styleTexte),
@@ -115,10 +116,10 @@ class DrawerComponent extends StatelessWidget {
                   //About
                   ListTile(
                     onTap: () => Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (c) => AboutSreen())),
+                        MaterialPageRoute(builder: (c) => const AboutScreen())),
                     title: Row(
                       children: <Widget>[
-                        Icon(Icons.description),
+                        const Icon(Icons.description),
                         Text(
                           mcvGAbout,
                           style: GoogleFonts.rubik(textStyle: styleTexte),

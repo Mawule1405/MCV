@@ -50,7 +50,7 @@ Widget generatorFormation(
   return GestureDetector(
     onTap: () {},
     child: Container(
-      padding: EdgeInsets.only(left: 20, right: 20, top: 10),
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
       child: Container(
         child: Column(
           children: [
@@ -76,7 +76,7 @@ Widget generatorFormation(
               ],
             ),
             Container(
-              padding: EdgeInsets.only(top: 5, bottom: 10),
+              padding: const EdgeInsets.only(top: 5, bottom: 10),
               alignment: Alignment.topLeft,
               child: Text(
                 ecole,
@@ -84,7 +84,7 @@ Widget generatorFormation(
               ),
             ),
             Container(
-              decoration: BoxDecoration(color: Color(mcvBlack)),
+              decoration: const BoxDecoration(color: Color(mcvBlack)),
               child: SizedBox(
                 height: 5.0,
                 width: MediaQuery.of(c).size.width - 40,
@@ -100,19 +100,19 @@ Widget generatorFormation(
 //Fonction générateur de titre
 Widget generatorTitle(BuildContext c, titleForm) {
   return Container(
-      padding: EdgeInsets.only(top: 40, bottom: 5, left: 20, right: 20),
+      padding: const EdgeInsets.only(top: 40, bottom: 5, left: 20, right: 20),
       alignment: Alignment.topLeft,
       child: Row(
         children: [
           Container(
-            padding: EdgeInsets.only(right: 20.0),
-            child: Icon(
+            padding: const EdgeInsets.only(right: 20.0),
+            child: const Icon(
               Icons.school,
               color: Color(mcvOrange),
             ),
           ),
           Container(
-            padding: EdgeInsets.only(right: 20),
+            padding: const EdgeInsets.only(right: 20),
             alignment: Alignment.topLeft,
             width: MediaQuery.of(c).size.width - 100,
             child: Text(
@@ -127,19 +127,19 @@ Widget generatorTitle(BuildContext c, titleForm) {
 //Fonction generateur de competences
 Widget generatorComptence(BuildContext c, String texte, int niveau) {
   List<Color> quintuple = [
-    Color(mcvBlack),
-    Color(mcvBlack),
-    Color(mcvBlack),
-    Color(mcvBlack),
-    Color(mcvBlack)
+    const Color(mcvBlack),
+    const Color(mcvBlack),
+    const Color(mcvBlack),
+    const Color(mcvBlack),
+    const Color(mcvBlack)
   ];
   if (niveau >= 0 && niveau <= 5) {
     for (int i = 0; i < niveau; i++) {
-      quintuple[i] = Color(mcvOrange);
+      quintuple[i] = const Color(mcvOrange);
     }
     return Container(
       width: MediaQuery.of(c).size.width - 40,
-      padding: EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(20.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -167,9 +167,9 @@ Widget generatorComptence(BuildContext c, String texte, int niveau) {
     );
   } else {
     return Container(
-      margin: EdgeInsets.only(left: 20, right: 20),
+      margin: const EdgeInsets.only(left: 20, right: 20),
       width: (MediaQuery.of(c).size.width - 40),
-      child: Text(
+      child: const Text(
           "Impossible de generer cette competence. Veuillez respecter l'echelle de 5 "),
     );
   }
@@ -177,19 +177,19 @@ Widget generatorComptence(BuildContext c, String texte, int niveau) {
 
 Widget generatorTitleComp(BuildContext c, titleForm) {
   return Container(
-      padding: EdgeInsets.only(top: 40, bottom: 5, left: 20, right: 20),
+      padding: const EdgeInsets.only(top: 40, bottom: 5, left: 20, right: 20),
       alignment: Alignment.topLeft,
       child: Row(
         children: [
           Container(
-            padding: EdgeInsets.only(right: 20.0),
-            child: Icon(
+            padding: const EdgeInsets.only(right: 20.0),
+            child: const Icon(
               Icons.access_alarm,
               color: Color(mcvOrange),
             ),
           ),
           Container(
-            padding: EdgeInsets.only(right: 20),
+            padding: const EdgeInsets.only(right: 20),
             alignment: Alignment.topLeft,
             width: MediaQuery.of(c).size.width - 100,
             child: Text(
