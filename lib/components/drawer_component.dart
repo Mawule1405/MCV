@@ -14,7 +14,7 @@ import '../screens/formation_screen.dart';
 import '../screens/competence_screen.dart';
 
 class DrawerComponent extends StatelessWidget {
-  const DrawerComponent({super.key});
+  const DrawerComponent( );
   @override
   Widget build(BuildContext context) {
     return Drawer(
